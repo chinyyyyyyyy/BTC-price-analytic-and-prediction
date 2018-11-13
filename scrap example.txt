@@ -1,0 +1,3 @@
+response.xpath("//h3[contains(@class, 'entry-title td-module-title')]/a[contains(@class, 'campaign-link')]//@href").extract()
+response.xpath("//h3[contains(@class, 'entry-title td-module-title')]//@href").extract()
+response.xpath("//span[contains(@style, 'display: none;')]//@content").extract()

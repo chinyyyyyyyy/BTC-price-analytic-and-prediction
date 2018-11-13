@@ -1,0 +1,2 @@
+cd %userprofile%\path\to\your\jupyter\dir
+jupyter notebook yourNotebook.ipynb

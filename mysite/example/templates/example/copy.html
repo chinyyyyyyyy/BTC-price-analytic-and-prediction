@@ -1,0 +1,154 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/themeforchin.css' %}">cd
+
+<body class="bg-light">
+  <div class="bg-dark m-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <img class="img-fluid d-block mx-auto" src="https://www.picz.in.th/images/2018/02/25/Logo.png" height="150" width="400
+400"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-warning">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 10px;right:10px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:180px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo&nbsp;&nbsp;
+      <img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16">
+    </pingendo>
+  </div>
+  <div class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1 class="display-4">Bitcoin Price  = {{day}}</h1>
+        </div>
+      </div>
+      <div class="row">
+        <iframe width="1200" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~chinyyyyyyyy/0.embed"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 text-center bg-warning">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="text-light">Tomorrow Price</h1>
+              <p class="text-light"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="d-flex justify-content-center">Last 5 Days Prediction</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>day</th>
+                <th>price</th>
+                <th>prediction</th>
+                <th>Error</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{day}}</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center display-3 text-primary">About Model</h1>
+          <p class="lead">&nbsp; &nbsp; &nbsp; &nbsp; This time series is predicted by &nbsp;Exponential Smoothing model. Exponential functions are used to assign exponentially decreasing weights over time. It is an easily learned and easily applied procedure for making
+            some determination based on prior assumptions by the user, such as seasonality. Exponential smoothing is often used for analysis of time-series data.
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;The raw data sequence is often represented by {x{t} beginning at time t=0, and the output of the exponential smoothing algorithm is commonly written as {s{t}}, which may be regarded as a best estimate of what
+            the next value of x will be. When the sequence of observations begins at time t=0, the simplest form of exponential smoothing is given by the formulas&nbsp;
+            <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;S{t} = αX{t} + (1 - α )S{t-1}.
+            <br>The unknown parameters and the initial values for any exponential smoothing method can be estimated by minimizing the SSE. Hence we find the values of the unknown parameters and the initial values that minimize</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-dark text-white m-1 p-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center p-1 m-1">Contact Me</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="text-center align-self-center col-md-7">
+          <div class="my-3 row">
+            <div class="col-4">
+              <a href="https://www.facebook.com/paphawit.boonyapongnukul" target="_blank"><i class="fa fa-3x fa-facebook"></i></a>
+            </div>
+            <div class="col-4">
+              <a href="https://twitter.com/ChiLnoP" target="_blank"><i class="fa fa-3x fa-twitter"></i></a>
+            </div>
+            <div class="col-4">
+              <a href="https://www.instagram.com/chinyyyyyyyy/" target="_blank"><i class="fa fa-3x fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="p-0 col-md-5 flex-column d-flex">
+          <img class="rounded-circle img-fluid mx-auto" src="https://www.picz.in.th/images/2018/02/25/1881842.jpg" width="250" height="250"> </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
